@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "ba460049-0e5b-457d-bc41-a0aebe327f9e",
+		"name": "StorySpoil",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6615120"
+	},
+	"item": [
+		{
+			"name": "AllMethods",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserLogIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"andarz\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/User/Authentication",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateStory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmYzVjMTI4ZC1hMTQyLTQ3ZDEtYmIwOC0wMmNlMmVjNTY4ZDciLCJpYXQiOiIwOC8xMi8yMDIzIDA2OjI4OjM3IiwiVXNlcklkIjoiZDczOWVhMWEtNTY4My00MWFlLThmNmMtMDhkYjlhZmExMzJiIiwiRW1haWwiOiJhbmRhcnpAdGVzdC5iZyIsIlVzZXJOYW1lIjoiYW5kYXJ6IiwiZXhwIjoxNjkxODQzMzE3LCJpc3MiOiJTdG9yeVNwb2lsX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiU3RvcnlTcG9pbF9XZWJBUElfU29mdFVuaSJ9.pmQ2kMVQl3BVVckOtwQ8oAxsQIEcyOIhKOWTwYyk4Ok",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Birds\",\r\n    \"description\": \"True story about the birds\",\r\n    \"url\": \"https://stylesatlife.com/wp-content/uploads/2019/05/different-types-of-birds-with-pictures-and.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/Story/Create",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Story",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllStories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmYzVjMTI4ZC1hMTQyLTQ3ZDEtYmIwOC0wMmNlMmVjNTY4ZDciLCJpYXQiOiIwOC8xMi8yMDIzIDA2OjI4OjM3IiwiVXNlcklkIjoiZDczOWVhMWEtNTY4My00MWFlLThmNmMtMDhkYjlhZmExMzJiIiwiRW1haWwiOiJhbmRhcnpAdGVzdC5iZyIsIlVzZXJOYW1lIjoiYW5kYXJ6IiwiZXhwIjoxNjkxODQzMzE3LCJpc3MiOiJTdG9yeVNwb2lsX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiU3RvcnlTcG9pbF9XZWJBUElfU29mdFVuaSJ9.pmQ2kMVQl3BVVckOtwQ8oAxsQIEcyOIhKOWTwYyk4Ok",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/Story/All",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Story",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StoryEdit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmYzVjMTI4ZC1hMTQyLTQ3ZDEtYmIwOC0wMmNlMmVjNTY4ZDciLCJpYXQiOiIwOC8xMi8yMDIzIDA2OjI4OjM3IiwiVXNlcklkIjoiZDczOWVhMWEtNTY4My00MWFlLThmNmMtMDhkYjlhZmExMzJiIiwiRW1haWwiOiJhbmRhcnpAdGVzdC5iZyIsIlVzZXJOYW1lIjoiYW5kYXJ6IiwiZXhwIjoxNjkxODQzMzE3LCJpc3MiOiJTdG9yeVNwb2lsX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiU3RvcnlTcG9pbF9XZWJBUElfU29mdFVuaSJ9.pmQ2kMVQl3BVVckOtwQ8oAxsQIEcyOIhKOWTwYyk4Ok",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Birds and cats\",\r\n    \"description\": \"True story\",\r\n    \"url\": \"https://i.cbc.ca/1.1497373.1435439854!/httpImage/image.jpg_gen/derivatives/16x9_780/hi-cat-with-pigeon-852-rtr2.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/Story/Edit/718157be-d74a-4195-d7a4-08db99812296",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Story",
+						"Edit",
+						"718157be-d74a-4195-d7a4-08db99812296"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Story",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJmYzVjMTI4ZC1hMTQyLTQ3ZDEtYmIwOC0wMmNlMmVjNTY4ZDciLCJpYXQiOiIwOC8xMi8yMDIzIDA2OjI4OjM3IiwiVXNlcklkIjoiZDczOWVhMWEtNTY4My00MWFlLThmNmMtMDhkYjlhZmExMzJiIiwiRW1haWwiOiJhbmRhcnpAdGVzdC5iZyIsIlVzZXJOYW1lIjoiYW5kYXJ6IiwiZXhwIjoxNjkxODQzMzE3LCJpc3MiOiJTdG9yeVNwb2lsX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiU3RvcnlTcG9pbF9XZWJBUElfU29mdFVuaSJ9.pmQ2kMVQl3BVVckOtwQ8oAxsQIEcyOIhKOWTwYyk4Ok",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d5wfqm7y6yb3q.cloudfront.net/api/Story/Delete/718157be-d74a-4195-d7a4-08db99812296",
+					"protocol": "https",
+					"host": [
+						"d5wfqm7y6yb3q",
+						"cloudfront",
+						"net"
+					],
+					"path": [
+						"api",
+						"Story",
+						"Delete",
+						"718157be-d74a-4195-d7a4-08db99812296"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
